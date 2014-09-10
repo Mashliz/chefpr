@@ -1,6 +1,11 @@
 {
+  "nginx": {
+    "port":80
+  },
   "run_list": [
-
+    "yum",
+    "yum-epel",
+    "nginx"
   ],
   "automatic": {
     "ipaddress": "192.168.33.10"
