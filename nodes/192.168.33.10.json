@@ -3,9 +3,7 @@
     "port":80
   },
   "run_list": [
-    "yum",
-    "yum-epel",
-    "nginx"
+    "chef-td-agent"
   ],
   "automatic": {
     "ipaddress": "192.168.33.10"
