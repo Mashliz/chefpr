@@ -3,7 +3,8 @@
     "port":80
   },
   "run_list": [
-    "yum",  
+    "yum",
+    "yum-epel",  
     "nginx",
     "startpage"
   ],
