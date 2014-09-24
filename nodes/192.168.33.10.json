@@ -3,9 +3,8 @@
     "port":80
   },
   "run_list": [
-    "apt",
-    "yum",
-    "chef-td-agent"
+    "nginx",
+    "startpage"
   ],
   "automatic": {
     "ipaddress": "192.168.33.10"
