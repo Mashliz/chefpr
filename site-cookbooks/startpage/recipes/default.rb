@@ -29,11 +29,8 @@ end
   end
 end
 
-
-cookbook_file "/home/vagrant/test2.txt" do
+template "/home/admin/www/index.html" do
   owner "root"
   group "root"
   mode 0644
-  checksum "91751cee0a1ab8414400238a761411daa29643ab4b8243e9a91649e25be53ada"
-  source "test.txt"
 end

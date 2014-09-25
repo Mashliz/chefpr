@@ -16,9 +16,7 @@ service "nginx" do
   action [ :enable, :start ]
 end
 
-template "nginx.conf" do
-  path "/etc/nginx/nginx.conf"
-  source "nginx.conf.erb"
+template "/etc/nginx/nginx.conf" do
   owner "root"
   group "root"
   mode 0644
