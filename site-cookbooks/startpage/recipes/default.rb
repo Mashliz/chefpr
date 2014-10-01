@@ -7,6 +7,15 @@
 # All rights reserved - Do Not Redistribute
 #
 
+%w{/home/admin /home/admin/www}.each do |dir|
+  directory dir do
+    owner "admin"
+    group "wheel"
+    mode 00771
+    action :create
+  end
+end
+
 user "admin" do
   shell "/bin/bash"
   home "/home/admin"
@@ -20,17 +29,8 @@ group "wheel" do
   append true
 end
 
-%w{/home/admin/www}.each do |dir|
-  directory dir do
-    owner "root"
-    group "root"
-    mode 0644
-    action :create
-  end
-end
-
 template "/home/admin/www/index.html" do
-  owner "root"
-  group "root"
-  mode 0644
+  owner "admin"
+  group "wheel"
+  mode 00664
 end
