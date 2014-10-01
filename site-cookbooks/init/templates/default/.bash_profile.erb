@@ -1,0 +1,18 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/bin
+
+export PATH
+
+alias la="ls -a"
+alias lal="ls -al"
+alias ...="../.."
+alias gulp="gulp --require coffee-script/register"
+cd /home/vagrant

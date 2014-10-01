@@ -1,19 +1,5 @@
 {
-  "startpage": {
-    "title":"hello nginx"
-  },
-  "nginx": {
-    "port":80,
-    "root":"/home/admin/www"
-  },
   "run_list": [
-    "iptables",
-    "yum",
-    "yum-epel",  
-    "nginx",
-    "startpage"
-  ],
-  "automatic": {
-    "ipaddress": "192.168.33.10"
-  }
+    "role[rails]"
+  ]
 }
