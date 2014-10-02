@@ -7,6 +7,13 @@
 # All rights reserved - Do Not Redistribute
 #
 
+directory "/vagrant/www" do
+  owner "vagrant"
+  group "vagrant"
+  mode  0711
+  action :create
+end
+
 package "nginx" do
   action :install
 end

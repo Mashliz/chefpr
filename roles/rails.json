@@ -1,6 +1,11 @@
 {
   "name" : "rails",
-  "default_attributes" : {},
+  "default_attributes" : {
+    "nginx": {
+      "port":80,
+      "root":"/vagrant/www"
+    }
+  },
   "override_attributes" : {},
   "json_class" : "Chef::Role",
   "description" : "",
@@ -8,16 +13,12 @@
   "startpage": {
     "title":"hello nginx"
   },
-  "nginx": {
-    "port":80,
-    "root":"/home/vagrant/www"
-  },
   "run_list": [
     "init",
     "iptables",
-    "yum",
-    "yum-epel",  
-    "nginx"
+    "yum-epel",
+    "nginx",
+    "mysql"
   ],
   "automatic": {
     "ipaddress": "192.168.33.10"
