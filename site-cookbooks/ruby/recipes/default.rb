@@ -53,16 +53,10 @@ bash "init rbenv" do
   code <<-EOS
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /home/vagrant/.bash_profile
     echo 'eval "$(rbenv init -)"' >> /home/vagrant/.bash_profile
+    exec $SHELL -l
+    rbenv install 2.1.1
+    rbenv global 2.1.1
     sudo /home/vagrant/.rbenv/plugins/ruby-build/install.sh
   EOS
   not_if "grep 'rbenv' /home/vagrant/.bash_profile"
 end
-
-# rbenv install 2.1.1
-# rbenv global 2.1.1
-# exec $SHELL -l
-
-
-
-
-
