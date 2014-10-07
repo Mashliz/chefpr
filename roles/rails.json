@@ -16,11 +16,13 @@
   "run_list": [
     "init",
     "iptables",
+    "git",
     "yum-epel",
-    // "ruby",
+    "ruby",
     "nginx",
     "mysql",
-    "unicorn"
+    "rails"
+    //"unicorn"
   ],
   "automatic": {
     "ipaddress": "192.168.33.10"
