@@ -8,8 +8,13 @@
 #
 
 
-package "ruby" do
- action :install
+# package "ruby" do
+#  action :install
+# end
+
+
+package "ruby-devel" do
+  action :install
 end
 
 directory "/home/vagrant/.rbenv" do

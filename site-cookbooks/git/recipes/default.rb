@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: unicorn
+# Cookbook Name:: git
 # Recipe:: default
 #
 # Copyright 2014, YOUR_COMPANY_NAME
@@ -7,6 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-gem_package "unicorn" do
-  action :install
+package "git" do
+  action :install  
 end
