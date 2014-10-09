@@ -20,9 +20,9 @@
     "yum-epel",
     "ruby",
     "nginx",
-    "mysql",
-    "rails",
-    "unicorn"
+    "mysql"
+    //"rails"
+    //"unicorn"
   ],
   "automatic": {
     "ipaddress": "192.168.33.10"
