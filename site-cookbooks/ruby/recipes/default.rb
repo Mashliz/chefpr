@@ -54,9 +54,11 @@ bash "init rbenv" do
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /home/vagrant/.bash_profile
     echo 'eval "$(rbenv init -)"' >> /home/vagrant/.bash_profile
     exec $SHELL -l
-    rbenv install 2.1.1
-    rbenv global 2.1.1
-    sudo /home/vagrant/.rbenv/plugins/ruby-build/install.sh
+    /home/vagrant/.rbenv/plugins/ruby-build/install.sh
+    sed -i -e "s/Defaults    env_reset/#Defaults    env_reset/" /etc/sudoers
+    rbenv install 2.1.3
+    rbenv global 2.1.3    
   EOS
   not_if "grep 'rbenv' /home/vagrant/.bash_profile"
 end
+

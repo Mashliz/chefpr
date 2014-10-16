@@ -1,0 +1,7 @@
+worker_processes 2
+working_directory "/vagrant/www/<%= node['rails']['name'] %>"
+ 
+listen "/tmp/unicorn_<%= node['rails']['name'] %>.sock"
+pid "/tmp/unicorn_<%= node['rails']['name'] %>.pid" 
+ 
+preload_app true

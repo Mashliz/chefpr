@@ -1,6 +1,9 @@
 {
   "name" : "rails",
   "default_attributes" : {
+    "rails": {
+      "name":"apps"
+    },
     "nginx": {
       "port":80,
       "root":"/vagrant/www"
