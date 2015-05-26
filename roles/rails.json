@@ -22,6 +22,7 @@
     "git",
     "yum-epel",
     "ruby",
+    "rubygems",
     "nginx",
     "mysql",
     "rails",
