@@ -6,7 +6,7 @@
     },
     "nginx": {
       "port":80,
-      "root":"/home/rails"
+      "root":"/vagrant/www"
     }
   },
   "override_attributes" : {},
@@ -22,7 +22,6 @@
     "git",
     "yum-epel",
     "ruby",
-    "rubygems",
     "nginx",
     "mysql",
     "rails",
