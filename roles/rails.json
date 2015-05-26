@@ -6,7 +6,7 @@
     },
     "nginx": {
       "port":80,
-      "root":"/vagrant/www"
+      "root":"/home/rails"
     }
   },
   "override_attributes" : {},
@@ -23,9 +23,9 @@
     "yum-epel",
     "ruby",
     "nginx",
-    "mysql"
-    //"rails"
-    //"unicorn"
+    "mysql",
+    "rails",
+    "unicorn"
   ],
   "automatic": {
     "ipaddress": "192.168.33.10"

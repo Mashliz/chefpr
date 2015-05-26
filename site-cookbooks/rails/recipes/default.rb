@@ -9,7 +9,6 @@
 bash "install rails" do
   code <<-EOS
     gem install rails
-    
   EOS
   not_if File.exists?("/home/vagrant/.rbenv/versions/2.1.3/bin/rails")
 end
