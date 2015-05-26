@@ -13,7 +13,7 @@
 # end
 
 
-package "ruby-devel" do
+package %w{ruby-devel rubygems } do
   action :install
 end
 
@@ -57,8 +57,7 @@ bash "init rbenv" do
     /home/vagrant/.rbenv/plugins/ruby-build/install.sh
     sed -i -e "s/Defaults    env_reset/#Defaults    env_reset/" /etc/sudoers
     rbenv install 2.1.3
-    rbenv global 2.1.3    
+    rbenv global 2.1.3
   EOS
   not_if "grep 'rbenv' /home/vagrant/.bash_profile"
 end
-
